@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Captain — talk to your PC</title>
+  <meta name="description" content="Captain is a native voice assistant for Windows. Hold Right Alt, speak a command, and your PC does it — hands-free." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="dot"></span>Captain</a>
+      <div class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a class="btn btn-primary" href="#download">Download</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Native voice assistant for Windows</span>
+      <h1>Talk to your PC. It just does it.</h1>
+      <p class="sub">Hold <span class="kbd">Right&nbsp;Alt</span>, say what you want, and let go. Captain sees your screen, moves the real cursor, clicks, types, and gets it done — hands-free.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="#download">Download for Windows</a>
+        <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
+      </div>
+      <p class="cta-note">Windows 10/11 · ~10&nbsp;MB · free to install, subscription for hosted AI</p>
+
+      <div class="demo">
+        <div class="demo-bar"><i></i><i></i><i></i></div>
+        <div class="demo-body">
+          <div class="bubble you"><small>You — holding Right Alt</small>What's on my screen right now?</div>
+          <div class="bubble cap"><small>Captain</small>You've got the budget spreadsheet open in Excel — row 14 looks unfinished. Want me to total column C?</div>
+          <div class="bubble you"><small>You</small>Yeah, and email it to Sam.</div>
+          <div class="bubble cap"><small>Captain</small>Done — totalled C2:C13 and drafted the email to Sam. I'll ask before I send.</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Three keys to your whole PC</h2>
+        <p>No new app to learn. It works on whatever's already on your screen.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Hold Right Alt</h3><p>Press and hold the key from anywhere in Windows, then speak naturally.</p></div>
+        <div class="step"><div class="n">2</div><h3>Say what you want</h3><p>"Open my downloads", "summarize this page", "reply to this email" — plain language.</p></div>
+        <div class="step"><div class="n">3</div><h3>Watch it act</h3><p>Captain moves the cursor and does it on the real screen, narrating as it goes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Built to actually be useful</h2>
+        <p>A real operator, not a chatbot in a box.</p>
+      </div>
+      <div class="features">
+        <div class="feat step"><h3>Sees your screen</h3><p>Reads what's in front of you and acts on it — apps, the browser, files, settings.</p></div>
+        <div class="feat step"><h3>Asks before anything risky</h3><p>Deleting a file or sending an email? Captain pops a confirmation only you can approve.</p></div>
+        <div class="feat step"><h3>Hosted AI, zero setup</h3><p>No API keys to manage. Sign in, subscribe, and the cloud brain is ready.</p></div>
+        <div class="feat step"><h3>Hands-free</h3><p>One key. Speak. It replies out loud and keeps working while you do.</p></div>
+        <div class="feat step"><h3>Native &amp; fast</h3><p>Built in Rust for Windows — no browser tab, no Electron, low latency.</p></div>
+        <div class="feat step"><h3>Private by design</h3><p>Your voice runs a session at a time; the API key never lives on your machine.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Simple pricing</h2>
+        <p>Captain installs free. A plan powers the hosted AI. Cancel anytime.</p>
+      </div>
+      <div class="tiers">
+        <div class="tier">
+          <span class="tag">Starter</span>
+          <h3>Bring your own key</h3>
+          <div class="price">$5 <span>one-time</span></div>
+          <ul>
+            <li>Own the app + updates</li>
+            <li>Full voice control</li>
+            <li>Use your own Gemini key</li>
+          </ul>
+          <a class="btn btn-ghost" href="#download">Download</a>
+        </div>
+        <div class="tier">
+          <span class="tag">Basic</span>
+          <h3>Hosted AI</h3>
+          <div class="price">$15 <span>/mo</span></div>
+          <ul>
+            <li>Hosted AI — no key needed</li>
+            <li>~3 hours of voice / month</li>
+            <li>Fair-use daily &amp; weekly limits</li>
+          </ul>
+          <a class="btn btn-ghost" href="#download">Get Basic</a>
+        </div>
+        <div class="tier pop">
+          <span class="tag">Pro · Popular</span>
+          <h3>Hosted AI</h3>
+          <div class="price">$20 <span>/mo</span></div>
+          <ul>
+            <li>Hosted AI — no key needed</li>
+            <li>~6 hours of voice / month</li>
+            <li>Higher limits + early features</li>
+          </ul>
+          <a class="btn btn-primary" href="#download">Get Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="download" id="download">
+      <h2>Get Captain for Windows</h2>
+      <p>Install, sign in with Google, pick a plan, and hold Right Alt.</p>
+      <!-- [YOU] point this at the hosted installer (see README): a public
+           GitHub Release asset on this repo, an R2 link, or /downloads/…exe -->
+      <a class="btn btn-primary btn-lg" href="https://github.com/Jaseelkt007/Jarvis_website/releases/latest/download/Captain_x64-setup.exe">Download Captain (.exe)</a>
+      <small>Windows 10/11 · 64-bit · the installer bundles the app + voice engine</small>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="dot"></span>Captain</a>
+      <div class="links">
+        <a href="#pricing">Pricing</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:support@example.com">Support</a>
+      </div>
+      <div class="copy">© 2026 Captain. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
