@@ -1,0 +1,124 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  path?: string;
+  /** Extra JSON-LD blocks (e.g. FAQPage) merged with the site-wide schema. */
+  schema?: Record<string, unknown>[];
+  noindex?: boolean;
+}
+
+const {
+  title = 'Voxhelm — Talk to your PC. It gets it done.',
+  description =
+    'Voxhelm is a native voice assistant for Windows. Hold a key, say what you want, and it operates your PC — apps, browser, files, and 40+ native actions — then tells you what it did.',
+  path = '/',
+  schema = [],
+  noindex = false,
+} = Astro.props;
+
+const SITE = 'https://voxhelm.de';
+const canonical = new URL(path, SITE).href;
+const ogImage = new URL('/og.svg', SITE).href;
+
+// Site-wide structured data — what Google + AI agents read to "understand" the
+// product. Always emitted; pages can pass extra blocks (e.g. FAQPage).
+const baseSchema: Record<string, unknown>[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Voxhelm',
+    url: SITE,
+    logo: `${SITE}/og.svg`,
+    description,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Voxhelm',
+    url: SITE,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Voxhelm',
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Windows 10, Windows 11',
+    description,
+    url: SITE,
+    downloadUrl: `${SITE}/downloads/Voxhelm-Setup.exe`,
+    softwareVersion: '0.3.0',
+    offers: [
+      {
+        '@type': 'Offer',
+        name: 'Basic',
+        price: '15',
+        priceCurrency: 'EUR',
+        category: 'subscription',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Pro',
+        price: '20',
+        priceCurrency: 'EUR',
+        category: 'subscription',
+      },
+    ],
+  },
+];
+const allSchema = [...baseSchema, ...schema];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <meta name="theme-color" content="#010101" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Voxhelm" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Fonts: Garamond (display) + Geist (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://db.onlinewebfonts.com" crossorigin />
+    <link
+      href="https://db.onlinewebfonts.com/c/2bf40ab72ea4897a3fd9b6e48b233a19?family=Garamond"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    {/* Structured data for search engines + AI agents */}
+    {
+      allSchema.map((block) => (
+        <script type="application/ld+json" set:html={JSON.stringify(block)} />
+      ))
+    }
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

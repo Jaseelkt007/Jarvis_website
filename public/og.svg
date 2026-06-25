@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#16213a"/>
+      <stop offset="55%" stop-color="#070910"/>
+      <stop offset="100%" stop-color="#010101"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g fill="none" stroke="#5b78ff" stroke-width="6" stroke-linecap="round" opacity="0.55" transform="translate(0,40)">
+    <path d="M120 300v30"/>
+    <path d="M160 280v70"/>
+    <path d="M200 250v130"/>
+    <path d="M240 290v50"/>
+    <path d="M280 230v170"/>
+    <path d="M320 295v40"/>
+  </g>
+  <text x="120" y="300" font-family="Garamond, 'Times New Roman', serif" font-size="92" fill="#ffffff" letter-spacing="2">Voxhelm</text>
+  <text x="122" y="362" font-family="Geist, sans-serif" font-size="34" fill="#b9c2d8" letter-spacing="1">Talk to your PC. It gets it done.</text>
+  <text x="122" y="540" font-family="Geist, sans-serif" font-size="24" fill="#7d879b" letter-spacing="3">NATIVE VOICE ASSISTANT FOR WINDOWS</text>
+</svg>

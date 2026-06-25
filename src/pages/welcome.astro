@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  path="/welcome"
+  title="You're all set — Voxhelm"
+  description="Your Voxhelm subscription is active."
+  noindex={true}
+>
+  <main class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-5 text-center sm:px-8">
+    <div class="ambient-glow pointer-events-none absolute inset-0"></div>
+    <div class="relative">
+      <p class="mb-5 text-[12px] font-light uppercase tracking-[0.3em] text-white/40">Subscription active</p>
+      <h1 class="font-garamond text-5xl font-normal text-white sm:text-6xl md:text-7xl">You're all set</h1>
+      <p class="mx-auto mt-6 max-w-md text-[15px] font-light leading-relaxed text-white/60">
+        Your Voxhelm plan is active. Head back to the Voxhelm app — it picks up your subscription
+        automatically — and hold <span class="text-white/90">Right&nbsp;Alt</span> to start talking.
+      </p>
+      <a
+        href="/"
+        class="liquid-glass mt-9 inline-block rounded-full px-9 py-3.5 text-[13px] font-normal uppercase tracking-[0.18em] text-white/90"
+      >
+        Back to Voxhelm
+      </a>
+      <p class="mx-auto mt-5 max-w-sm text-[13px] font-light text-white/35">
+        If the app is still on the plan screen, give it a few seconds — it polls for your
+        subscription and continues on its own.
+      </p>
+    </div>
+  </main>
+</Base>

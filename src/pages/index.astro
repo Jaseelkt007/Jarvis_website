@@ -1,0 +1,268 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.tsx';
+
+const features = [
+  {
+    title: 'Just talk, naturally',
+    body: 'No commands to memorize. Say it the way you would to a person — Voxhelm figures out the steps.',
+  },
+  {
+    title: 'It sees your screen',
+    body: 'Voxhelm reads what is on screen, on your device, so it acts on the right thing instead of guessing.',
+  },
+  {
+    title: '40+ native actions',
+    body: 'Open apps, drive the browser, manage files, type, move windows, control media and system — all native, no scripts.',
+  },
+  {
+    title: 'It tells you what it did',
+    body: 'Voxhelm narrates as it works and always asks before anything destructive, like deleting a file or sending mail.',
+  },
+  {
+    title: 'Private by design',
+    body: 'The mic is live only while you hold the key; your screen is read only when you ask. Sessions are not stored on our servers.',
+  },
+  {
+    title: 'Hosted AI, zero setup',
+    body: 'Sign in with Google and go. No API keys to manage, no models to install — the intelligence runs in the cloud.',
+  },
+];
+
+const steps = [
+  { n: '01', title: 'Hold Right Alt', body: 'Press and hold the key from anywhere in Windows.' },
+  { n: '02', title: 'Say what you want', body: '"Open my email", "rename these screenshots", "play something focused".' },
+  { n: '03', title: 'Voxhelm acts', body: 'It moves the real cursor, clicks, types, and carries out the steps on your screen.' },
+  { n: '04', title: 'It reports back', body: 'You hear what it did — and it confirms with you before anything risky.' },
+];
+
+const plans = [
+  {
+    name: 'Basic',
+    price: '€15',
+    cadence: '/ month',
+    blurb: 'For everyday hands-free help.',
+    points: ['Hosted AI voice + brain', 'Fair-use monthly minutes', 'All 40+ actions', 'Cancel anytime'],
+    featured: false,
+  },
+  {
+    name: 'Pro',
+    price: '€20',
+    cadence: '/ month',
+    blurb: 'For heavier daily driving.',
+    points: ['Everything in Basic', 'More monthly minutes', 'Priority capacity', 'Cancel anytime'],
+    featured: true,
+  },
+];
+
+const faqs = [
+  {
+    q: 'What is Voxhelm?',
+    a: 'Voxhelm is a native voice assistant for Windows. You hold a key and speak; it sees your screen and operates your PC — opening apps, controlling the browser, managing files, typing, and more — then tells you what it did.',
+  },
+  {
+    q: 'Which Windows versions are supported?',
+    a: 'Windows 10 and Windows 11, 64-bit. macOS is not supported yet.',
+  },
+  {
+    q: 'Is my data private?',
+    a: 'Yes. Your microphone is only active while you hold the shortcut, and your screen is only read when you explicitly ask Voxhelm to look. We do not store the contents of your sessions on our servers.',
+  },
+  {
+    q: 'Do I need my own API key?',
+    a: 'No. Voxhelm uses hosted AI — you sign in with Google and it works. There are no API keys to obtain or manage.',
+  },
+  {
+    q: 'How do I cancel?',
+    a: 'You can cancel your subscription at any time; access continues until the end of the paid period.',
+  },
+  {
+    q: 'How do I get help?',
+    a: 'Email support@voxhelm.de and we will get back to you.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+---
+
+<Base path="/" schema={[faqSchema]}>
+  <a id="top"></a>
+  <Hero client:load />
+
+  <main>
+    <!-- FEATURES -->
+    <section id="features" class="relative border-t border-white/5 px-5 py-24 sm:px-8 md:py-32">
+      <div class="ambient-glow pointer-events-none absolute inset-0"></div>
+      <div class="relative mx-auto max-w-6xl">
+        <p class="mb-4 text-[12px] font-light uppercase tracking-[0.3em] text-white/40">What it does</p>
+        <h2 class="font-garamond mb-14 max-w-3xl text-4xl font-normal leading-tight text-white sm:text-5xl md:text-6xl">
+          A voice assistant that actually operates your computer.
+        </h2>
+        <div class="grid gap-px overflow-hidden rounded-2xl border border-white/8 sm:grid-cols-2 lg:grid-cols-3">
+          {
+            features.map((f) => (
+              <div class="bg-white/[0.015] p-8 transition-colors hover:bg-white/[0.04]">
+                <h3 class="mb-3 text-lg font-medium text-white">{f.title}</h3>
+                <p class="text-[15px] font-light leading-relaxed text-white/60">{f.body}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="border-t border-white/5 px-5 py-24 sm:px-8 md:py-32">
+      <div class="mx-auto max-w-6xl">
+        <p class="mb-4 text-[12px] font-light uppercase tracking-[0.3em] text-white/40">How it works</p>
+        <h2 class="font-garamond mb-14 max-w-3xl text-4xl font-normal leading-tight text-white sm:text-5xl md:text-6xl">
+          Hold a key. Speak. It's done.
+        </h2>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {
+            steps.map((s) => (
+              <div>
+                <div class="font-garamond mb-4 text-3xl text-white/30">{s.n}</div>
+                <h3 class="mb-2 text-lg font-medium text-white">{s.title}</h3>
+                <p class="text-[15px] font-light leading-relaxed text-white/60">{s.body}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="border-t border-white/5 px-5 py-24 sm:px-8 md:py-32">
+      <div class="mx-auto max-w-5xl">
+        <p class="mb-4 text-[12px] font-light uppercase tracking-[0.3em] text-white/40">Pricing</p>
+        <h2 class="font-garamond mb-4 max-w-3xl text-4xl font-normal leading-tight text-white sm:text-5xl md:text-6xl">
+          Simple plans. Introductory pricing.
+        </h2>
+        <p class="mb-14 max-w-xl text-[15px] font-light text-white/55">
+          Voxhelm runs locally; a subscription powers the hosted AI. Prices are introductory and may change.
+        </p>
+        <div class="grid gap-6 md:grid-cols-2">
+          {
+            plans.map((p) => (
+              <div
+                class={`glass-card relative rounded-2xl p-8 ${p.featured ? 'ring-1 ring-white/20' : ''}`}
+              >
+                {p.featured && (
+                  <span class="absolute right-6 top-6 rounded-full border border-white/15 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-white/70">
+                    Most popular
+                  </span>
+                )}
+                <h3 class="text-sm font-medium uppercase tracking-[0.2em] text-white/70">{p.name}</h3>
+                <div class="mt-4 flex items-baseline gap-1">
+                  <span class="font-garamond text-5xl text-white">{p.price}</span>
+                  <span class="text-sm font-light text-white/50">{p.cadence}</span>
+                </div>
+                <p class="mt-3 text-[15px] font-light text-white/55">{p.blurb}</p>
+                <ul class="mt-6 space-y-3">
+                  {p.points.map((pt) => (
+                    <li class="flex items-start gap-3 text-[15px] font-light text-white/70">
+                      <span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-white/50" />
+                      {pt}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="/downloads/Voxhelm-Setup.exe"
+                  class="liquid-glass mt-8 block rounded-full py-3.5 text-center text-[12px] font-normal uppercase tracking-[0.18em] text-white/90"
+                >
+                  Get started
+                </a>
+              </div>
+            ))
+          }
+        </div>
+        <p class="mt-6 text-[13px] font-light text-white/40">
+          You choose and pay for a plan inside the app after installing. Cancel anytime.
+        </p>
+      </div>
+    </section>
+
+    <!-- SUPPORT / FAQ -->
+    <section id="support" class="border-t border-white/5 px-5 py-24 sm:px-8 md:py-32">
+      <div class="mx-auto max-w-3xl">
+        <p class="mb-4 text-[12px] font-light uppercase tracking-[0.3em] text-white/40">Support</p>
+        <h2 class="font-garamond mb-14 text-4xl font-normal leading-tight text-white sm:text-5xl md:text-6xl">
+          Questions, answered.
+        </h2>
+        <div class="divide-y divide-white/8 border-y border-white/8">
+          {
+            faqs.map((f) => (
+              <details class="group px-1 py-6">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-medium text-white/90 transition-colors hover:text-white">
+                  {f.q}
+                  <span class="text-white/40 transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p class="mt-4 text-[15px] font-light leading-relaxed text-white/60">{f.a}</p>
+              </details>
+            ))
+          }
+        </div>
+        <p class="mt-10 text-[15px] font-light text-white/55">
+          Still stuck? Email
+          <a class="text-white underline underline-offset-4 hover:text-white/80" href="mailto:support@voxhelm.de">
+            support@voxhelm.de
+          </a>
+          .
+        </p>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section id="download" class="relative border-t border-white/5 px-5 py-28 text-center sm:px-8 md:py-36">
+      <div class="ambient-glow pointer-events-none absolute inset-0"></div>
+      <div class="relative mx-auto max-w-2xl">
+        <h2 class="font-garamond text-4xl font-normal leading-tight text-white sm:text-5xl md:text-6xl">
+          Get Voxhelm for Windows
+        </h2>
+        <p class="mx-auto mt-5 max-w-md text-[15px] font-light leading-relaxed text-white/60">
+          Install, sign in with Google, pick a plan, and hold Right Alt. That's it.
+        </p>
+        <a
+          href="/downloads/Voxhelm-Setup.exe"
+          class="liquid-glass mt-9 inline-block rounded-full px-10 py-4 text-[13px] font-normal uppercase tracking-[0.18em] text-white/90"
+        >
+          Download Voxhelm (.exe)
+        </a>
+        <p class="mt-5 text-[12px] font-light uppercase tracking-[0.18em] text-white/40">
+          Windows 10 / 11 · 64-bit · bundles the app + voice engine
+        </p>
+        <p class="mx-auto mt-4 max-w-md text-[13px] font-light leading-relaxed text-white/35">
+          The installer isn't code-signed yet, so Windows SmartScreen may warn "unknown publisher" —
+          click <span class="text-white/60">More info → Run anyway</span>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/8 px-5 py-12 sm:px-8">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row">
+      <div class="text-center sm:text-left">
+        <div class="font-light uppercase text-white" style="letter-spacing:0.25em">Voxhelm</div>
+        <p class="mt-1 text-[13px] font-light text-white/40">Talk to your PC. It gets it done.</p>
+      </div>
+      <div class="flex items-center gap-7 text-[13px] font-light text-white/50">
+        <a class="transition-colors hover:text-white" href="/privacy">Privacy</a>
+        <a class="transition-colors hover:text-white" href="/terms">Terms</a>
+        <a class="transition-colors hover:text-white" href="mailto:support@voxhelm.de">Support</a>
+      </div>
+    </div>
+    <p class="mx-auto mt-8 max-w-6xl text-center text-[12px] font-light text-white/30 sm:text-left">
+      © 2026 Voxhelm. A native voice assistant for Windows.
+    </p>
+  </footer>
+</Base>

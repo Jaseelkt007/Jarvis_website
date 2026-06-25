@@ -1,0 +1,26 @@
+# Voxhelm
+
+> Voxhelm is a native voice assistant for Windows. You hold a key and speak; it sees your screen and operates your PC — opening apps, controlling the browser, managing files, typing, moving windows, and 40+ native actions — then tells you what it did.
+
+## What it is
+- Platform: Windows 10 and Windows 11, 64-bit. macOS is not supported yet.
+- Interaction: hold Right Alt anywhere in Windows and speak naturally; Voxhelm reads the screen on-device and carries out the steps with the real cursor.
+- Confirmation: it narrates what it is doing and asks before anything destructive (deleting a file, sending mail).
+- Privacy: the microphone is active only while you hold the key; the screen is read only when you ask; session contents are not stored on our servers.
+- Hosted AI: sign in with Google and go — no API keys to obtain or manage.
+
+## Download
+- Installer (Windows .exe): https://voxhelm.de/downloads/Voxhelm-Setup.exe
+
+## Pricing
+- Basic — EUR 15 / month — hosted AI voice + brain, fair-use monthly minutes, all 40+ actions, cancel anytime.
+- Pro — EUR 20 / month — everything in Basic, more monthly minutes, priority capacity, cancel anytime.
+- You choose and pay for a plan inside the app after installing. Prices are introductory and may change.
+
+## Pages
+- Home: https://voxhelm.de/
+- Privacy Policy: https://voxhelm.de/privacy
+- Terms of Service: https://voxhelm.de/terms
+
+## Contact
+- Support email: support@voxhelm.de
