@@ -5,36 +5,36 @@ import { DISCORD_URL } from '../site';
 
 const features = [
   {
-    title: 'Just talk, naturally',
-    body: 'No commands to memorize. Say it the way you would to a person — Voxhelm figures out the steps.',
+    title: 'It sees what you see',
+    body: 'Voxhelm reads your screen, so it acts on the thing in front of you instead of guessing. You never have to explain where you are.',
   },
   {
-    title: 'It sees your screen',
-    body: 'Voxhelm reads what is on screen, on your device, so it acts on the right thing instead of guessing.',
+    title: 'It shows you how',
+    body: 'Ask how something works and Voxhelm draws right on your screen — arrows, circles, step by step. Like someone leaning over your shoulder.',
   },
   {
-    title: '40+ native actions',
-    body: 'Open apps, drive the browser, manage files, type, move windows, control media and system — all native, no scripts.',
+    title: 'It does the boring parts',
+    body: 'Opens your apps, drives your browser, sorts your files, types, moves windows, handles music and settings. You just say it.',
   },
   {
-    title: 'It tells you what it did',
-    body: 'Voxhelm narrates as it works and always asks before anything destructive, like deleting a file or sending mail.',
+    title: 'It thinks out loud',
+    body: 'Voxhelm tells you what it is doing as it works — and always asks first before anything it cannot undo.',
   },
   {
-    title: 'Private by design',
-    body: 'The mic is live only while you hold the key; your screen is read only when you ask. Sessions are not stored on our servers.',
+    title: 'It stays between you two',
+    body: 'The mic is live only while you hold the key. Your screen is read only when you ask. Nothing from your sessions is kept on our servers.',
   },
   {
-    title: 'Hosted AI, zero setup',
-    body: 'Sign in with Google and go. No API keys to manage, no models to install — the intelligence runs in the cloud.',
+    title: 'It is ready when you are',
+    body: 'Sign in with Google and start talking. No API keys, no models to install, nothing to configure — the intelligence runs in the cloud.',
   },
 ];
 
 const steps = [
-  { n: '01', title: 'Hold Right Alt', body: 'Press and hold the key from anywhere in Windows.' },
-  { n: '02', title: 'Say what you want', body: '"Open my email", "rename these screenshots", "play something focused".' },
-  { n: '03', title: 'Voxhelm acts', body: 'It moves the real cursor, clicks, types, and carries out the steps on your screen.' },
-  { n: '04', title: 'It reports back', body: 'You hear what it did — and it confirms with you before anything risky.' },
+  { n: '01', title: 'Hold Right Alt', body: 'Press and hold, from anywhere in Windows. That is the whole interface.' },
+  { n: '02', title: 'Just say it', body: 'Talk the way you would to a person. "Open my email", "rename these screenshots", "show me how this works".' },
+  { n: '03', title: 'It gets to work', body: 'Voxhelm looks at your screen and moves the real cursor, clicks and types — or draws on screen to walk you through it.' },
+  { n: '04', title: 'It talks you through it', body: 'You hear what it did as it goes. And it always asks first before anything it cannot undo.' },
 ];
 
 const plans = [
@@ -59,7 +59,11 @@ const plans = [
 const faqs = [
   {
     q: 'What is Voxhelm?',
-    a: 'Voxhelm is a native voice assistant for Windows. You hold a key and speak; it sees your screen and operates your PC — opening apps, controlling the browser, managing files, typing, and more — then tells you what it did.',
+    a: 'Voxhelm is an AI that lives on your Windows PC. You hold a key and speak; it sees your screen and gets on with it — opening apps, controlling the browser, managing files, typing — and it can teach you, drawing on your screen to show you how something works.',
+  },
+  {
+    q: 'Can Voxhelm teach me things?',
+    a: 'Yes. Ask how something works and Voxhelm can draw directly on your screen — arrows, circles, step by step — to walk you through it, instead of only describing it in words.',
   },
   {
     q: 'Which Windows versions are supported?',
@@ -107,9 +111,9 @@ const faqSchema = {
     <section id="features" class="relative border-t border-white/5 px-5 py-24 sm:px-8 md:py-32">
       <div class="ambient-glow pointer-events-none absolute inset-0"></div>
       <div class="relative mx-auto max-w-6xl">
-        <p class="mb-4 text-[12px] font-light uppercase tracking-[0.3em] text-white/40">What it does</p>
+        <p class="mb-4 text-[12px] font-light uppercase tracking-[0.3em] text-white/40">Who it is</p>
         <h2 class="font-garamond mb-14 max-w-3xl text-4xl font-normal leading-tight text-white sm:text-5xl md:text-6xl">
-          A voice assistant that actually operates your computer.
+          It doesn't just listen. It sees, it acts, and it teaches.
         </h2>
         <div class="grid gap-px overflow-hidden rounded-2xl border border-white/8 sm:grid-cols-2 lg:grid-cols-3">
           {
@@ -288,7 +292,7 @@ const faqSchema = {
     <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row">
       <div class="text-center sm:text-left">
         <div class="font-light uppercase text-white" style="letter-spacing:0.25em">Voxhelm</div>
-        <p class="mt-1 text-[13px] font-light text-white/40">Talk to your PC. It gets it done.</p>
+        <p class="mt-1 text-[13px] font-light text-white/40">An AI that lives in your PC.</p>
       </div>
       <div class="flex items-center gap-7 text-[13px] font-light text-white/50">
         <a

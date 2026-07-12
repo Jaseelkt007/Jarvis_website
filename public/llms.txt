@@ -1,10 +1,11 @@
 # Voxhelm
 
-> Voxhelm is a native voice assistant for Windows. You hold a key and speak; it sees your screen and operates your PC — opening apps, controlling the browser, managing files, typing, moving windows, and 40+ native actions — then tells you what it did.
+> Voxhelm is an AI voice assistant that lives on your Windows PC. You hold a key and speak; it sees your screen and gets on with it — opening apps, controlling the browser, managing files, typing, moving windows, and 40+ native actions — talking you through what it did. It also teaches: ask how something works and it draws directly on your screen to show you.
 
 ## What it is
 - Platform: Windows 10 and Windows 11, 64-bit. macOS is not supported yet.
 - Interaction: hold Right Alt anywhere in Windows and speak naturally; Voxhelm reads the screen on-device and carries out the steps with the real cursor.
+- Teaching: Voxhelm can draw on your screen — arrows, circles, step-by-step marks — to show you how to do something, rather than only describing it.
 - Confirmation: it narrates what it is doing and asks before anything destructive (deleting a file, sending mail).
 - Privacy: the microphone is active only while you hold the key; the screen is read only when you ask; session contents are not stored on our servers.
 - Hosted AI: sign in with Google and go — no API keys to obtain or manage.

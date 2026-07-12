@@ -161,13 +161,13 @@ export default function Hero() {
       <div className="relative z-10 mx-auto flex h-[calc(100vh-88px)] max-w-5xl flex-col items-center justify-center px-5 pb-16 text-center sm:px-8">
         <h1 className="font-garamond mb-6 font-normal leading-[1.08] tracking-tight text-white sm:mb-8">
           <span className="sr-only">
-            Voxhelm — a native voice assistant for Windows. Speak, and it gets it done.{' '}
+            Voxhelm — an AI that lives in your Windows PC. Never work alone again.{' '}
           </span>
           <span className="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl">
-            <StaggeredFade text="Speak." />
+            <StaggeredFade text="Never work" />
           </span>
           <span className="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl">
-            <StaggeredFade text="It's done." />
+            <StaggeredFade text="alone again." />
           </span>
         </h1>
 
@@ -177,9 +177,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.4 }}
         >
-          A native voice assistant for Windows. Hold <span className="text-white/90">Right&nbsp;Alt</span>,
-          say what you want — Voxhelm sees your screen and operates your PC: apps, browser,
-          files, and 40+ native actions.
+          Voxhelm lives on your PC. It sees what you're doing, talks it through with you,
+          does the parts you'd rather skip — and shows you how, when you want to learn.
         </motion.p>
 
         <motion.div
