@@ -1,0 +1,11 @@
+{
+    "version":  "0.3.11",
+    "notes":  "Ask Voxhelm to check, look up, or find anything online and it now answers straight from a live web search - no browser windows opening by themselves.\nQuestions about the latest anything - models, prices, releases, news - are pulled fresh from the web instead of Voxhelm\u0027s older built-in knowledge.\n\u0027Open the browser\u0027 now opens YOUR Chrome, signed in as you. Asking for a site opens it in your default browser. The separate automation window only appears when you ask Voxhelm to actually do something on a page, and it starts itself when needed.\nFixed: if a page or YouTube got stuck, every browser command after it would hang too. A stuck connection now recovers on its own, and Voxhelm tells you honestly when something didn\u0027t go through.",
+    "pub_date":  "2026-07-11T00:12:00Z",
+    "platforms":  {
+                      "windows-x86_64":  {
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSZHJhOVh3bmE5R1RtTEp0cWdoZlVDeFdJNll3VFFQbnBCMUhmOXF4K1J6NURsQmVGdFJNNkU0MFdiakdmNTdpdWNFbktjN2hKYW44RS9qclJyN2pTc3ZlTi9NSktsU0FjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzNzI4NzE4CWZpbGU6Vm94aGVsbV8wLjMuMTFfeDY0LXNldHVwLmV4ZQoyUmlWOG9yK0czRjRoYTV6N3VLWGowbFNuVHZVNDcwOTBFUWNJMzE3Y1lTcDNXUVhzM09KSkkvVHRlblA3ZmQramJVUDR0QmxUSFBNUjFENi9SNE9Cdz09Cg==",
+                                             "url":  "https://voxhelm.de/downloads/Voxhelm_0.3.11_x64-setup.exe"
+                                         }
+                  }
+}

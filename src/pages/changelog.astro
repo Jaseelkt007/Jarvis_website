@@ -1,0 +1,121 @@
+---
+import Base from '../layouts/Base.astro';
+import data from '../data/releases.json';
+import { DISCORD_URL } from '../site';
+
+const releases = data.releases;
+const latest = releases[0];
+
+function fmtDate(iso: string): string {
+  const d = new Date(`${iso}T00:00:00Z`);
+  return d.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  });
+}
+
+// Structured data so Google + AI agents can read the version history and always
+// know the current version. Pairs with the site-wide SoftwareApplication block.
+const changelogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Voxhelm Changelog',
+  url: 'https://voxhelm.de/changelog',
+  description:
+    'Release notes and version history for Voxhelm, the AI agent for your PC.',
+  about: {
+    '@type': 'SoftwareApplication',
+    name: 'Voxhelm',
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Windows 10, Windows 11',
+    softwareVersion: latest?.version,
+  },
+};
+---
+
+<Base
+  path="/changelog"
+  title="Changelog — Voxhelm"
+  description="Release notes and version history for Voxhelm, the AI agent for your PC. See what's new in each version — updates install automatically inside the app."
+  schema={[changelogSchema]}
+>
+  <!-- Top bar -->
+  <header class="border-b border-white/8 px-5 py-5 sm:px-8">
+    <div class="mx-auto flex max-w-4xl items-center justify-between">
+      <a href="/" class="font-light uppercase text-white transition-opacity hover:opacity-80" style="letter-spacing:0.25em">Voxhelm</a>
+      <a
+        href="/downloads/Voxhelm-Setup.exe"
+        class="liquid-glass rounded-full px-6 py-2.5 text-[12px] font-normal uppercase tracking-[0.18em] text-white/90"
+      >
+        Download
+      </a>
+    </div>
+  </header>
+
+  <main class="relative px-5 py-20 sm:px-8 md:py-28">
+    <div class="ambient-glow pointer-events-none absolute inset-0"></div>
+    <div class="relative mx-auto max-w-3xl">
+      <p class="mb-4 text-[12px] font-light uppercase tracking-[0.3em] text-white/40">Changelog</p>
+      <h1 class="font-garamond mb-5 text-4xl font-normal leading-tight text-white sm:text-5xl md:text-6xl">
+        What's new in Voxhelm
+      </h1>
+      <p class="mb-16 max-w-xl text-[15px] font-light leading-relaxed text-white/55">
+        Voxhelm updates itself — new versions arrive as a quiet “Update &amp; Restart”
+        prompt inside the app, so you're always on the latest without re-downloading.
+        Here's the full history.
+      </p>
+
+      <div class="space-y-14">
+        {
+          releases.map((r) => (
+            <article class="relative border-l border-white/10 pl-6 sm:pl-8">
+              <div class="absolute -left-[5px] top-2 h-[9px] w-[9px] rounded-full bg-white/40"></div>
+              <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                <h2 class="font-garamond text-2xl text-white sm:text-3xl">
+                  {r.title}
+                </h2>
+                <span class="rounded-full border border-white/12 px-2.5 py-0.5 text-[11px] font-light uppercase tracking-[0.15em] text-white/55">
+                  v{r.version}
+                </span>
+              </div>
+              <p class="mt-1.5 text-[13px] font-light uppercase tracking-[0.18em] text-white/35">
+                {fmtDate(r.date)}
+              </p>
+              <ul class="mt-5 space-y-3">
+                {r.notes.map((n) => (
+                  <li class="flex items-start gap-3 text-[15px] font-light leading-relaxed text-white/65">
+                    <span class="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-white/40" />
+                    {n}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/8 px-5 py-12 sm:px-8">
+    <div class="mx-auto flex max-w-3xl flex-col items-center justify-between gap-6 sm:flex-row">
+      <div class="text-center sm:text-left">
+        <div class="font-light uppercase text-white" style="letter-spacing:0.25em">Voxhelm</div>
+        <p class="mt-1 text-[13px] font-light text-white/40">An agent that lives in your PC.</p>
+      </div>
+      <div class="flex items-center gap-7 text-[13px] font-light text-white/50">
+        <a class="transition-colors hover:text-white" href="/">Home</a>
+        <a
+          class="transition-colors hover:text-white"
+          href={DISCORD_URL}
+          target="_blank"
+          rel="noopener noreferrer">Discord</a
+        >
+        <a class="transition-colors hover:text-white" href="/privacy">Privacy</a>
+        <a class="transition-colors hover:text-white" href="/terms">Terms</a>
+      </div>
+    </div>
+  </footer>
+</Base>

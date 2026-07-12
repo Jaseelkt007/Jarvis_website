@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { DISCORD_URL } from '../site';
 ---
 
 <Base
@@ -27,6 +28,21 @@ import Base from '../layouts/Base.astro';
         If the app is still on the plan screen, give it a few seconds — it polls for your
         subscription and continues on its own.
       </p>
+
+      <div class="mx-auto mt-12 max-w-sm border-t border-white/8 pt-8">
+        <p class="text-[13px] font-light leading-relaxed text-white/50">
+          Come say hello in the Voxhelm community — share what you build, report bugs, and vote
+          on what we ship next.
+        </p>
+        <a
+          href={DISCORD_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-4 inline-block text-[12px] font-light uppercase tracking-[0.18em] text-white/80 underline underline-offset-8 transition-colors hover:text-white"
+        >
+          Join the Discord
+        </a>
+      </div>
     </div>
   </main>
 </Base>

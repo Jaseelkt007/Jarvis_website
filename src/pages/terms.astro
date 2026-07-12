@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { DISCORD_URL } from '../site';
 ---
 
 <Base
@@ -35,7 +36,11 @@ import Base from '../layouts/Base.astro';
 
       <div>
         <h2 class="mb-3 text-lg font-medium text-white">Contact</h2>
-        <p>Questions: <a class="text-white underline underline-offset-4" href="mailto:support@voxhelm.de">support@voxhelm.de</a>.</p>
+        <p>
+          Questions: reach us in the
+          <a class="text-white underline underline-offset-4" href={DISCORD_URL} target="_blank" rel="noopener noreferrer">Voxhelm Discord</a>.
+          A dedicated contact address is being set up and will be published here.
+        </p>
       </div>
     </div>
   </main>

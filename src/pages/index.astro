@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.tsx';
+import { DISCORD_URL } from '../site';
 
 const features = [
   {
@@ -78,7 +79,11 @@ const faqs = [
   },
   {
     q: 'How do I get help?',
-    a: 'Email support@voxhelm.de and we will get back to you.',
+    a: 'Join the Voxhelm Discord. Ask questions, report bugs, and request features there — we read everything and it is the fastest way to reach us.',
+  },
+  {
+    q: 'Is there a community?',
+    a: 'Yes. The Voxhelm Discord is where users share what they build, report bugs, and vote on which features get built next. Everyone is welcome, whether you are a developer or not.',
   },
 ];
 
@@ -211,12 +216,42 @@ const faqSchema = {
             ))
           }
         </div>
-        <p class="mt-10 text-[15px] font-light text-white/55">
-          Still stuck? Email
-          <a class="text-white underline underline-offset-4 hover:text-white/80" href="mailto:support@voxhelm.de">
-            support@voxhelm.de
-          </a>
-          .
+        <!-- COMMUNITY -->
+        <div class="glass-card mt-10 rounded-2xl p-8 sm:p-10">
+          <div class="flex flex-col gap-7 sm:flex-row sm:items-center sm:justify-between">
+            <div class="flex items-start gap-5">
+              <svg
+                class="mt-0.5 h-7 w-7 shrink-0 text-white/70"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.317 4.369a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.79.037c-.211.375-.445.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.32.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .079.009c.12.099.245.198.372.292a.077.077 0 0 1-.006.127c-.598.35-1.22.644-1.873.891a.077.077 0 0 0-.041.107c.36.699.772 1.364 1.225 1.994a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.549-13.66a.06.06 0 0 0-.031-.028ZM8.02 15.331c-1.183 0-2.157-1.086-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.332-.956 2.418-2.157 2.418Zm7.975 0c-1.183 0-2.157-1.086-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.332-.946 2.418-2.157 2.418Z"
+                />
+              </svg>
+              <div>
+                <h3 class="text-lg font-medium text-white">Join the community</h3>
+                <p class="mt-2 max-w-md text-[15px] font-light leading-relaxed text-white/60">
+                  Ask questions, report bugs, and vote on what gets built next. The most-upvoted
+                  feature requests are the ones we ship.
+                </p>
+              </div>
+            </div>
+            <a
+              href={DISCORD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="liquid-glass shrink-0 rounded-full px-8 py-3.5 text-center text-[12px] font-normal uppercase tracking-[0.18em] text-white/90"
+            >
+              Join Discord
+            </a>
+          </div>
+        </div>
+
+        <p class="mt-6 text-[15px] font-light text-white/55">
+          Discord is the fastest way to reach us — questions, bugs, and ideas all get
+          answered there.
         </p>
       </div>
     </section>
@@ -256,9 +291,20 @@ const faqSchema = {
         <p class="mt-1 text-[13px] font-light text-white/40">Talk to your PC. It gets it done.</p>
       </div>
       <div class="flex items-center gap-7 text-[13px] font-light text-white/50">
+        <a
+          class="transition-colors hover:text-white"
+          href={DISCORD_URL}
+          target="_blank"
+          rel="noopener noreferrer">Discord</a
+        >
+        <a
+          class="transition-colors hover:text-white"
+          href={DISCORD_URL}
+          target="_blank"
+          rel="noopener noreferrer">Support</a
+        >
         <a class="transition-colors hover:text-white" href="/privacy">Privacy</a>
         <a class="transition-colors hover:text-white" href="/terms">Terms</a>
-        <a class="transition-colors hover:text-white" href="mailto:support@voxhelm.de">Support</a>
       </div>
     </div>
     <p class="mx-auto mt-8 max-w-6xl text-center text-[12px] font-light text-white/30 sm:text-left">

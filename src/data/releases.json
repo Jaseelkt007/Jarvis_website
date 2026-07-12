@@ -1,0 +1,115 @@
+{
+  "_comment": "Canonical Voxhelm changelog. Single source of truth: the release script (release.ps1) turns the newest entry's notes into latest.json for the in-app 'Update & Restart' prompt, and the website /changelog page renders this same file. Add a new entry at the TOP for every release; keep it user-facing (what changed for them), not commit-speak. Dates are ISO YYYY-MM-DD.",
+  "releases": [
+    {
+      "version": "0.3.11",
+      "date": "2026-07-10",
+      "title": "Answers from the live web, and your browser stays yours",
+      "notes": [
+        "Ask Voxhelm to check, look up, or find anything online and it now answers straight from a live web search - no browser windows opening by themselves.",
+        "Questions about the latest anything - models, prices, releases, news - are pulled fresh from the web instead of Voxhelm's older built-in knowledge.",
+        "'Open the browser' now opens YOUR Chrome, signed in as you. Asking for a site opens it in your default browser. The separate automation window only appears when you ask Voxhelm to actually do something on a page, and it starts itself when needed.",
+        "Fixed: if a page or YouTube got stuck, every browser command after it would hang too. A stuck connection now recovers on its own, and Voxhelm tells you honestly when something didn't go through."
+      ]
+    },
+    {
+      "version": "0.3.10",
+      "date": "2026-07-09",
+      "title": "A lighter touch",
+      "notes": [
+        "The line you draw when circling something on screen now fades away behind your cursor like smoke, instead of staying as a solid mark.",
+        "Same gesture, same answers - Voxhelm still sees exactly what you circled. Only the look changed: softer while you draw, gone within about a second."
+      ]
+    },
+    {
+      "version": "0.3.9",
+      "date": "2026-07-09",
+      "title": "Show Voxhelm what you're looking at",
+      "notes": [
+        "New: point at your screen. Hold Right Alt to talk, then hold your right mouse button and circle anything - a paragraph, a diagram, an icon, a spot on a page. Voxhelm sees exactly what you circled and answers about it, or acts right there.",
+        "Circle a muscle in a diagram and ask \"what is this?\". Circle a paragraph and ask what it says. Circle a spot on your web page and say \"add a button right here\".",
+        "Your right-click is untouched unless you're holding the talk key - and you can switch the whole thing off in Settings.",
+        "New Guide section in the app: the shortcuts that matter, and a bank of things to say out loud. Most people never discover half of what Voxhelm can do.",
+        "Setup now walks you through the new pointing gesture."
+      ]
+    },
+    {
+      "version": "0.3.8",
+      "date": "2026-07-03",
+      "title": "Sign-in sticks now",
+      "notes": [
+        "Fixed new installs saying \"You're not signed in yet\" at the end of setup even after signing in - your sign-in is now remembered properly.",
+        "The same fix makes voice work reliably right after setup on brand-new installs.",
+        "If you hit this: update, then sign in once more and you're set - your free month of Pro is intact."
+      ]
+    },
+    {
+      "version": "0.3.7",
+      "date": "2026-07-02",
+      "title": "Safety improvements",
+      "notes": [
+        "Voxhelm now double-checks with you before moving a file, so nothing gets relocated without your say-so.",
+        "Added guardrails so Voxhelm only opens real applications by name - it won't launch programs from a file path or a network location, and won't drop files into your Windows startup folder.",
+        "Confirmation prompts now show where a file is going, so you can see exactly what you're approving."
+      ]
+    },
+    {
+      "version": "0.3.6",
+      "date": "2026-07-02",
+      "title": "Smoother updates",
+      "notes": [
+        "Fixed an error some people saw while updating ('Error opening file for writing') - the voice engine now shuts down cleanly before an update installs and starts right back up after.",
+        "Updates no longer interrupt anything until the download is complete, so Voxhelm keeps working while the new version downloads."
+      ]
+    },
+    {
+      "version": "0.3.5",
+      "date": "2026-07-02",
+      "title": "Setup fixes",
+      "notes": [
+        "Fixed setup getting stuck at the end: 'Start using Voxhelm' now activates your account reliably, and tells you what's wrong if it can't.",
+        "Fixed the hands-on setup tasks not responding for some people - the voice engine now starts dependably during setup, and setup says so while it's still warming up.",
+        "If you signed in before this fix and didn't get your free month of Pro, it's now applied to your account automatically."
+      ]
+    },
+    {
+      "version": "0.3.4",
+      "date": "2026-07-01",
+      "title": "Hands-on setup, a free month of Pro, and polish",
+      "notes": [
+        "New setup walks you through it hands-on: hold Right Alt to talk, ask Voxhelm to look something up and type it for you, and have it draw on your screen, so you know it works before you start.",
+        "Your first month of Pro is on us. Just sign in, no card needed. After that you stay on a free plan with generous limits.",
+        "Updates are now easy to see: 'Check for updates' shows the result right in Settings instead of a message you might miss.",
+        "Cleaner window controls and text throughout, and no more stray error when uninstalling."
+      ]
+    },
+    {
+      "version": "0.3.3",
+      "date": "2026-07-01",
+      "title": "Web search + more reliable typing",
+      "notes": [
+        "Voxhelm can now answer with up-to-date info from the web - ask about the news, a price, the weather, scores, or anything current and it looks it up for you.",
+        "More reliable typing - text Voxhelm types for you now lands exactly, with no dropped or repeated characters."
+      ]
+    },
+    {
+      "version": "0.3.2",
+      "date": "2026-06-29",
+      "title": "Sign-in fix",
+      "notes": [
+        "Fixed an issue where some people couldn't sign in after installing — \"Continue with Google\" now works reliably.",
+        "Clearer messages if sign-in is ever interrupted, so you always know what to do next."
+      ]
+    },
+    {
+      "version": "0.3.1",
+      "date": "2026-06-25",
+      "title": "Automatic updates",
+      "notes": [
+        "Voxhelm now updates itself — when a new version ships you'll get a quiet 'Update & Restart' prompt instead of re-downloading the installer.",
+        "Checkout now runs on the faster, more reliable voxhelm.de backend, with clearer messages if anything goes wrong.",
+        "Various reliability fixes under the hood."
+      ]
+    }
+  ]
+}

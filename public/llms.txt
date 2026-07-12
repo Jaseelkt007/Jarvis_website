@@ -23,4 +23,4 @@
 - Terms of Service: https://voxhelm.de/terms
 
 ## Contact
-- Support email: support@voxhelm.de
+- Community & support: https://discord.gg/4VZm8Qcd8A (Discord — questions, bug reports, feature requests)
