@@ -1,15 +1,70 @@
 {
-  "_comment": "Canonical Voxhelm changelog. Single source of truth: the release script (release.ps1) turns the newest entry's notes into latest.json for the in-app 'Update & Restart' prompt, and the website /changelog page renders this same file. Add a new entry at the TOP for every release; keep it user-facing (what changed for them), not commit-speak. Dates are ISO YYYY-MM-DD.",
+  "_comment": "Canonical Voxhelm changelog. Single source of truth: the release script (release.ps1) turns the newest entry's notes into latest.json for the in-app 'Update & Restart' prompt, and the website /changelog page renders this same file (publish-update.sh copies it to Jarvis_website/src/data/releases.json). THIS IS PUBLISHED MARKETING COPY, NOT AN ENGINEERING LOG — competitors and prospects read every line. Never describe a security fix's mechanism, never admit a defect in the payment or sign-in path, never name vendors/architecture (Stripe, CDP, providers, the broker), never hint at what's coming next. Say what the customer can now DO; collapse everything else into 'Reliability improvements'. TERSE IS THE HOUSE STYLE — size the note to the size of the change: a small release gets ONE short line ('Voxhelm has a new app icon.'), never a paragraph. Do not explain the change, tour the user through where they will see it, or reassure them the rest still works. Only ship an entry for a release that changed something worth a customer's attention — patch releases need no entry. The candid record lives in docs/_milestone_log.md, which is not published. See CLAUDE.md, 'The changelog is a public surface'. Add new entries at the TOP. Dates are ISO YYYY-MM-DD.",
   "releases": [
+    {
+      "version": "0.4.2",
+      "date": "2026-07-14",
+      "title": "New icon",
+      "notes": [
+        "Voxhelm has a new app icon."
+      ]
+    },
+    {
+      "version": "0.4.1",
+      "date": "2026-07-13",
+      "title": "A clear acceptable-use policy",
+      "notes": [
+        "Voxhelm now politely declines requests that go against our acceptable-use policy - unlawful or harmful actions. Everything else works exactly as it always has.",
+        "The Terms of Service at voxhelm.de/terms now spell out the policy in plain language."
+      ]
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-07-13",
+      "title": "Voxhelm remembers you",
+      "notes": [
+        "Tell Voxhelm something about yourself - \"remember that I'm practising German at B1\", \"I edit video in Premiere\", \"keep your replies short\" - and it still knows next time you talk to it. No more starting from scratch every session.",
+        "Say \"forget that I...\" whenever something changes, or just tell it the new version - it updates what it knows instead of piling up contradictions.",
+        "New Memory panel in the app: see everything Voxhelm has learned about you, edit or delete any of it, or switch memory off. It's kept on your PC only, and Voxhelm won't remember passwords or keys."
+      ]
+    },
+    {
+      "version": "0.3.14",
+      "date": "2026-07-13",
+      "title": "No more hourly cut-off",
+      "notes": [
+        "The hourly limit is gone. Your voice time is now measured daily and weekly only - so a long session no longer gets cut short just because you've been busy in the last hour.",
+        "Your usage now shows what actually matters: your daily limit and your weekly limit."
+      ]
+    },
+    {
+      "version": "0.3.13",
+      "date": "2026-07-13",
+      "title": "See your Pro trial at a glance",
+      "notes": [
+        "Your free month of Pro now shows the days remaining, right in the sidebar - so you always know where you stand.",
+        "Keeping Pro is one click from there when you're ready, and nothing you've got used to goes away.",
+        "Already on Pro? Elite, with three times the voice limits, is now a click away too."
+      ]
+    },
+    {
+      "version": "0.3.12",
+      "date": "2026-07-12",
+      "title": "Plans that make sense: Free, Pro, and the new Elite",
+      "notes": [
+        "Three clear plans: Free, Pro ($15/month), and the new Elite ($30/month) with three times the Pro voice limits. Prices show in euros or dollars depending on where you are.",
+        "Manage your subscription right in the app: move up to Elite, switch back down, or cancel to Free. Cancelling keeps everything you paid for until the period ends, and you can resume any time before then.",
+        "The plans page shows your current plan and when it renews - no more guessing what you're on."
+      ]
+    },
     {
       "version": "0.3.11",
       "date": "2026-07-10",
       "title": "Answers from the live web, and your browser stays yours",
       "notes": [
-        "Ask Voxhelm to check, look up, or find anything online and it now answers straight from a live web search - no browser windows opening by themselves.",
-        "Questions about the latest anything - models, prices, releases, news - are pulled fresh from the web instead of Voxhelm's older built-in knowledge.",
-        "'Open the browser' now opens YOUR Chrome, signed in as you. Asking for a site opens it in your default browser. The separate automation window only appears when you ask Voxhelm to actually do something on a page, and it starts itself when needed.",
-        "Fixed: if a page or YouTube got stuck, every browser command after it would hang too. A stuck connection now recovers on its own, and Voxhelm tells you honestly when something didn't go through."
+        "Ask Voxhelm to check, look up, or find anything online and it answers straight away from a live web search.",
+        "Ask about the latest anything - models, prices, releases, news - and you get today's answer, not last year's.",
+        "'Open the browser' opens YOUR Chrome, signed in as you, and asking for a site opens it in your default browser."
       ]
     },
     {
@@ -18,7 +73,7 @@
       "title": "A lighter touch",
       "notes": [
         "The line you draw when circling something on screen now fades away behind your cursor like smoke, instead of staying as a solid mark.",
-        "Same gesture, same answers - Voxhelm still sees exactly what you circled. Only the look changed: softer while you draw, gone within about a second."
+        "Same gesture, same answers - only the look changed."
       ]
     },
     {
@@ -26,79 +81,29 @@
       "date": "2026-07-09",
       "title": "Show Voxhelm what you're looking at",
       "notes": [
-        "New: point at your screen. Hold Right Alt to talk, then hold your right mouse button and circle anything - a paragraph, a diagram, an icon, a spot on a page. Voxhelm sees exactly what you circled and answers about it, or acts right there.",
+        "Point at your screen. Hold Right Alt to talk, then hold your right mouse button and circle anything - a paragraph, a diagram, an icon, a spot on a page. Voxhelm sees exactly what you circled and answers about it, or acts right there.",
         "Circle a muscle in a diagram and ask \"what is this?\". Circle a paragraph and ask what it says. Circle a spot on your web page and say \"add a button right here\".",
         "Your right-click is untouched unless you're holding the talk key - and you can switch the whole thing off in Settings.",
-        "New Guide section in the app: the shortcuts that matter, and a bank of things to say out loud. Most people never discover half of what Voxhelm can do.",
-        "Setup now walks you through the new pointing gesture."
-      ]
-    },
-    {
-      "version": "0.3.8",
-      "date": "2026-07-03",
-      "title": "Sign-in sticks now",
-      "notes": [
-        "Fixed new installs saying \"You're not signed in yet\" at the end of setup even after signing in - your sign-in is now remembered properly.",
-        "The same fix makes voice work reliably right after setup on brand-new installs.",
-        "If you hit this: update, then sign in once more and you're set - your free month of Pro is intact."
+        "New Guide section in the app: the shortcuts that matter, and a bank of things to say out loud. Most people never discover half of what Voxhelm can do."
       ]
     },
     {
       "version": "0.3.7",
       "date": "2026-07-02",
-      "title": "Safety improvements",
+      "title": "You're always the one who decides",
       "notes": [
-        "Voxhelm now double-checks with you before moving a file, so nothing gets relocated without your say-so.",
-        "Added guardrails so Voxhelm only opens real applications by name - it won't launch programs from a file path or a network location, and won't drop files into your Windows startup folder.",
-        "Confirmation prompts now show where a file is going, so you can see exactly what you're approving."
-      ]
-    },
-    {
-      "version": "0.3.6",
-      "date": "2026-07-02",
-      "title": "Smoother updates",
-      "notes": [
-        "Fixed an error some people saw while updating ('Error opening file for writing') - the voice engine now shuts down cleanly before an update installs and starts right back up after.",
-        "Updates no longer interrupt anything until the download is complete, so Voxhelm keeps working while the new version downloads."
-      ]
-    },
-    {
-      "version": "0.3.5",
-      "date": "2026-07-02",
-      "title": "Setup fixes",
-      "notes": [
-        "Fixed setup getting stuck at the end: 'Start using Voxhelm' now activates your account reliably, and tells you what's wrong if it can't.",
-        "Fixed the hands-on setup tasks not responding for some people - the voice engine now starts dependably during setup, and setup says so while it's still warming up.",
-        "If you signed in before this fix and didn't get your free month of Pro, it's now applied to your account automatically."
+        "Voxhelm now checks with you before it changes anything on your machine - and the confirmation shows you exactly what it's about to do, and where.",
+        "Security and safety improvements throughout."
       ]
     },
     {
       "version": "0.3.4",
       "date": "2026-07-01",
-      "title": "Hands-on setup, a free month of Pro, and polish",
+      "title": "Hands-on setup, and a free month of Pro",
       "notes": [
-        "New setup walks you through it hands-on: hold Right Alt to talk, ask Voxhelm to look something up and type it for you, and have it draw on your screen, so you know it works before you start.",
+        "Setup now walks you through it hands-on: hold Right Alt to talk, ask Voxhelm to look something up and type it for you, and have it draw on your screen - so you know it works before you start.",
         "Your first month of Pro is on us. Just sign in, no card needed. After that you stay on a free plan with generous limits.",
-        "Updates are now easy to see: 'Check for updates' shows the result right in Settings instead of a message you might miss.",
-        "Cleaner window controls and text throughout, and no more stray error when uninstalling."
-      ]
-    },
-    {
-      "version": "0.3.3",
-      "date": "2026-07-01",
-      "title": "Web search + more reliable typing",
-      "notes": [
-        "Voxhelm can now answer with up-to-date info from the web - ask about the news, a price, the weather, scores, or anything current and it looks it up for you.",
-        "More reliable typing - text Voxhelm types for you now lands exactly, with no dropped or repeated characters."
-      ]
-    },
-    {
-      "version": "0.3.2",
-      "date": "2026-06-29",
-      "title": "Sign-in fix",
-      "notes": [
-        "Fixed an issue where some people couldn't sign in after installing — \"Continue with Google\" now works reliably.",
-        "Clearer messages if sign-in is ever interrupted, so you always know what to do next."
+        "'Check for updates' shows you the result right in Settings, instead of a message you might miss."
       ]
     },
     {
@@ -106,9 +111,7 @@
       "date": "2026-06-25",
       "title": "Automatic updates",
       "notes": [
-        "Voxhelm now updates itself — when a new version ships you'll get a quiet 'Update & Restart' prompt instead of re-downloading the installer.",
-        "Checkout now runs on the faster, more reliable voxhelm.de backend, with clearer messages if anything goes wrong.",
-        "Various reliability fixes under the hood."
+        "Voxhelm now updates itself - when a new version ships you get a quiet 'Update & Restart' prompt instead of re-downloading the installer."
       ]
     }
   ]
