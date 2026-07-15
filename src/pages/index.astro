@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.tsx';
-import { DISCORD_URL } from '../site';
+import { DISCORD_URL, SUPPORT_EMAIL } from '../site';
 
 const features = [
   {
@@ -83,7 +83,7 @@ const faqs = [
   },
   {
     q: 'How do I get help?',
-    a: 'Join the Voxhelm Discord. Ask questions, report bugs, and request features there — we read everything and it is the fastest way to reach us.',
+    a: 'Email support@voxhelm.de, or join the Voxhelm Discord to ask questions, report bugs, and request features — we read everything there too.',
   },
   {
     q: 'Is there a community?',
@@ -303,9 +303,7 @@ const faqSchema = {
         >
         <a
           class="transition-colors hover:text-white"
-          href={DISCORD_URL}
-          target="_blank"
-          rel="noopener noreferrer">Support</a
+          href={`mailto:${SUPPORT_EMAIL}`}>Support</a
         >
         <a class="transition-colors hover:text-white" href="/privacy">Privacy</a>
         <a class="transition-colors hover:text-white" href="/terms">Terms</a>

@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { DISCORD_URL } from '../site';
+import { DISCORD_URL, PRIVACY_EMAIL } from '../site';
 ---
 
 <Base
@@ -51,9 +51,11 @@ import { DISCORD_URL } from '../site';
       <div>
         <h2 class="mb-3 text-lg font-medium text-white">Contact</h2>
         <p>
-          For privacy questions or to exercise your data rights, reach us in the
-          <a class="text-white underline underline-offset-4" href={DISCORD_URL} target="_blank" rel="noopener noreferrer">Voxhelm Discord</a>.
-          A dedicated privacy contact address is being set up and will be published here.
+          For privacy questions or to exercise your data rights (access, correction, deletion), email
+          <a class="text-white underline underline-offset-4" href={`mailto:${PRIVACY_EMAIL}`}>{PRIVACY_EMAIL}</a>.
+          You can also reach us in the
+          <a class="text-white underline underline-offset-4" href={DISCORD_URL} target="_blank" rel="noopener noreferrer">Voxhelm Discord</a>
+          for general questions.
         </p>
       </div>
     </div>

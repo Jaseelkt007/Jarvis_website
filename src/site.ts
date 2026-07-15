@@ -1,3 +1,5 @@
 /** Shared, site-wide constants. Keep external URLs here, not inline in pages. */
 
 export const DISCORD_URL = 'https://discord.gg/4VZm8Qcd8A';
+export const SUPPORT_EMAIL = 'support@voxhelm.de';
+export const PRIVACY_EMAIL = 'privacy@voxhelm.de';
