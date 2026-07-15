@@ -16,7 +16,14 @@ import { DISCORD_URL, PRIVACY_EMAIL } from '../site';
     <div class="mt-10 space-y-8 text-[15px] font-light leading-relaxed text-white/70">
       <p>
         Voxhelm ("we", "us") is a voice assistant for Windows. This policy explains what we collect
-        and why. We keep data collection to the minimum needed to run the product.
+        and why. We keep data collection to the minimum needed to run the product. Voxhelm is
+        operated by an individual based in Germany — see our
+        <a class="text-white underline underline-offset-4" href="/impressum">Impressum</a>
+        for full legal identity and contact details.
+      </p>
+      <p>
+        Voxhelm is an AI product: when you use it, you are interacting with an AI system, not a
+        human. This is inherent to the product and how it is marketed.
       </p>
 
       <div>
@@ -33,7 +40,7 @@ import { DISCORD_URL, PRIVACY_EMAIL } from '../site';
         <ul class="space-y-3">
           <li><strong class="font-medium text-white/90">Account &amp; sign-in:</strong> when you sign in with Google we receive your email and a Google account identifier, used to identify your account and let your subscription follow you across devices.</li>
           <li><strong class="font-medium text-white/90">Billing:</strong> subscriptions are processed by Stripe. We do not store your card details; Stripe does. We keep your subscription status and plan.</li>
-          <li><strong class="font-medium text-white/90">Usage metering:</strong> we record the duration of hosted-AI sessions to enforce fair-use limits. We do not store the contents of those sessions on our servers.</li>
+          <li><strong class="font-medium text-white/90">Usage metering:</strong> we record session duration and, for hosted-AI calls, token counts and cost data per call (which model, how much it processed) to enforce fair-use limits and understand product costs. We do not store the contents — text, audio, or images — of those sessions on our servers.</li>
           <li><strong class="font-medium text-white/90">Hosted AI calls:</strong> when you use the hosted AI, the necessary request (e.g. text or a screenshot you ask us to look at) is sent to our AI provider to generate a response, then discarded. The provider processes it under their terms.</li>
         </ul>
       </div>
@@ -44,8 +51,33 @@ import { DISCORD_URL, PRIVACY_EMAIL } from '../site';
       </div>
 
       <div>
+        <h2 class="mb-3 text-lg font-medium text-white">Where your data goes</h2>
+        <p>
+          Some of the processors we use — Stripe (billing), Google (sign-in), and our hosted-AI
+          providers — are based in or transfer data to the United States. Where that happens, we
+          rely on their standard contractual clauses or another safeguard recognized under GDPR.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="mb-3 text-lg font-medium text-white">How long we keep it</h2>
+        <p>
+          Account, sign-in, and subscription-status data is kept for as long as your account is
+          active. Usage records used for fair-use limits are kept for 70 days; per-call token/cost
+          records are kept for up to 400 days. Session content is never stored, so there is nothing
+          to retain beyond what's listed above.
+        </p>
+      </div>
+
+      <div>
         <h2 class="mb-3 text-lg font-medium text-white">Your rights</h2>
-        <p>You can cancel your subscription at any time and request deletion of your account data by contacting us. Where applicable (e.g. GDPR), you have rights to access, correct, and delete your personal data.</p>
+        <p>You can cancel your subscription at any time and request deletion of your account data by contacting us. Where applicable (e.g. GDPR), you have rights to access, correct, and delete your personal data, and to lodge a complaint with a supervisory authority — for us, the Landesbeauftragte für Datenschutz und Informationsfreiheit Baden-Württemberg (LfDI BW), or your own country's equivalent authority.</p>
+        <p class="mt-3">
+          If you're in California or another jurisdiction with similar privacy laws (e.g. CCPA), you
+          have equivalent rights to know, access, correct, and delete your personal information. As
+          stated above, we do not sell personal information. Contact us the same way to exercise
+          these rights, wherever you are.
+        </p>
       </div>
 
       <div>
