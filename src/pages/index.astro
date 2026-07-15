@@ -39,20 +39,28 @@ const steps = [
 
 const plans = [
   {
-    name: 'Basic',
-    price: '€15',
-    cadence: '/ month',
-    blurb: 'For everyday hands-free help.',
-    points: ['Hosted AI voice + brain', 'Fair-use monthly minutes', 'All 40+ actions', 'Cancel anytime'],
+    name: 'Free',
+    price: 'Free',
+    cadence: '',
+    blurb: 'Try it, no card required.',
+    points: ['Hosted AI voice + brain', 'Fair-use daily & weekly minutes', 'All 40+ actions'],
     featured: false,
   },
   {
     name: 'Pro',
-    price: '€20',
+    price: '€15',
+    cadence: '/ month',
+    blurb: 'For everyday hands-free help.',
+    points: ['Everything in Free', 'More fair-use minutes', 'Priority capacity', 'Cancel anytime'],
+    featured: true,
+  },
+  {
+    name: 'Elite',
+    price: '€30',
     cadence: '/ month',
     blurb: 'For heavier daily driving.',
-    points: ['Everything in Basic', 'More monthly minutes', 'Priority capacity', 'Cancel anytime'],
-    featured: true,
+    points: ['Everything in Pro', 'Most fair-use minutes', 'Priority capacity', 'Cancel anytime'],
+    featured: false,
   },
 ];
 
@@ -159,7 +167,7 @@ const faqSchema = {
         <p class="mb-14 max-w-xl text-[15px] font-light text-white/55">
           Voxhelm runs locally; a subscription powers the hosted AI. Prices are introductory and may change.
         </p>
-        <div class="grid gap-6 md:grid-cols-2">
+        <div class="grid gap-6 md:grid-cols-3">
           {
             plans.map((p) => (
               <div
