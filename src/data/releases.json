@@ -2,6 +2,14 @@
   "_comment": "Canonical Voxhelm changelog. Single source of truth: the release script (release.ps1) turns the newest entry's notes into latest.json for the in-app 'Update & Restart' prompt, and the website /changelog page renders this same file (publish-update.sh copies it to Jarvis_website/src/data/releases.json). THIS IS PUBLISHED MARKETING COPY, NOT AN ENGINEERING LOG — competitors and prospects read every line. Never describe a security fix's mechanism, never admit a defect in the payment or sign-in path, never name vendors/architecture (Stripe, CDP, providers, the broker), never hint at what's coming next. Say what the customer can now DO; collapse everything else into 'Reliability improvements'. TERSE IS THE HOUSE STYLE — size the note to the size of the change: a small release gets ONE short line ('Voxhelm has a new app icon.'), never a paragraph. Do not explain the change, tour the user through where they will see it, or reassure them the rest still works. Only ship an entry for a release that changed something worth a customer's attention — patch releases need no entry. The candid record lives in docs/_milestone_log.md, which is not published. See CLAUDE.md, 'The changelog is a public surface'. Add new entries at the TOP. Dates are ISO YYYY-MM-DD.",
   "releases": [
     {
+      "version": "0.6.1",
+      "date": "2026-07-17",
+      "title": "Meeting notes fixes",
+      "notes": [
+        "Taking notes from the Meetings page now works reliably."
+      ]
+    },
+    {
       "version": "0.6.0",
       "date": "2026-07-17",
       "title": "Meeting notes",
