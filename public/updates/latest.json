@@ -1,11 +1,11 @@
 {
-    "version":  "0.5.2",
-    "notes":  "Bug fixes and improvements.",
-    "pub_date":  "2026-07-17T02:33:13Z",
+    "version":  "0.6.0",
+    "notes":  "New: Voxhelm writes up your meetings for you. Turn it on in Settings › Meetings, then say “take notes for this meeting” or press Take notes on the Meetings page. Works with Teams, Meet, Zoom and the rest, and nothing joins your call.\nThe moment the meeting ends you get the document: what was decided, who agreed to what, the questions left open, and the full transcript. It\u0027s saved as a Markdown file in your own folder. Export to other formats is coming.\nIt finishes on its own once the meeting does, so you don\u0027t have to remember.",
+    "pub_date":  "2026-07-17T11:02:04Z",
     "platforms":  {
                       "windows-x86_64":  {
-                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSZHJhOVh3bmE5R1gzNHBHcnZGOUpGMkJWemxmU0FJN0FOSVVUckFhdER3UUl0bTBKc0huNHNrOXlqTVA1U1l2d0xVRWFFRHlLcjJRSExSNWQ0eHBRbXFqd0NROVdyK3dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MjU1NTkxCWZpbGU6Vm94aGVsbV8wLjUuMl94NjQtc2V0dXAuZXhlClRzZk12UjZmMmNRVkR0bm9iZkJnOGNDa2dSMU5INDVRZGFoakVacVlkNHZyUWtVZ04xRmpCTFZ3YmF6czlJUWlGbjhtdU8wYTVKeXlNWWR6NklTQkJBPT0K",
-                                             "url":  "https://voxhelm.de/downloads/Voxhelm_0.5.2_x64-setup.exe"
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSZHJhOVh3bmE5R2RzQ0l4dUpOSkphcmM1V0NWb1I1TUVWeTRic0JObDFoYTFMVzg3U2dFYkdWNWRUMXVhUDZLamlIS1N3dEJmUUppNkRFcFRnM2h5OWpiRjhTQ2U3Y2djPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0Mjg2MTIzCWZpbGU6Vm94aGVsbV8wLjYuMF94NjQtc2V0dXAuZXhlCjVqK052aTUxc29uSzEyVjJTUnNHRXZKMzQ3U09kT2Z6L2ZMWCtZcG9QanhZeE5yclFMMHFDa25TeUVDK2VpVFZSZzJpTXpLT0VjTkZzdFpmNkNnckF3PT0K",
+                                             "url":  "https://voxhelm.de/downloads/Voxhelm_0.6.0_x64-setup.exe"
                                          }
                   }
 }
