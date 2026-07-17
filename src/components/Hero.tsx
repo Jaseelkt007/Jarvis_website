@@ -194,13 +194,12 @@ export default function Hero() {
           >
             Download for Windows
           </a>
-          <a
-            href="#how"
-            className="rounded-full px-6 py-4 text-[13px] font-light uppercase text-white/60 transition-colors hover:text-white"
+          <span
+            className="rounded-full border border-white/15 px-6 py-4 text-[13px] font-light uppercase text-white/55"
             style={{ letterSpacing: '0.18em' }}
           >
-            See how it works
-          </a>
+            macOS &mdash; coming soon
+          </span>
         </motion.div>
 
         <p className="mt-6 text-[11px] font-light uppercase tracking-[0.18em] text-white/40">
