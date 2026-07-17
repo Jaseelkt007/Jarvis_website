@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.tsx';
+import MeetingDemo from '../components/MeetingDemo.tsx';
+import DictationDemo from '../components/DictationDemo.tsx';
 import { DISCORD_URL, SUPPORT_EMAIL } from '../site';
 
 const features = [
@@ -15,6 +17,14 @@ const features = [
   {
     title: 'It does the boring parts',
     body: 'Opens your apps, drives your browser, sorts your files, types, moves windows, handles music and settings. You just say it.',
+  },
+  {
+    title: 'It writes up your meetings',
+    body: 'Voxhelm listens to the call and hands you the document when it ends: decisions, action items, open questions. No bot joins, and no recording is kept.',
+  },
+  {
+    title: 'It types what you say',
+    body: 'Hold a key and speak, in any app. The fillers and false starts come out; the finished sentence lands where your cursor already is.',
   },
   {
     title: 'It thinks out loud',
@@ -153,6 +163,72 @@ const faqSchema = {
               </div>
             ))
           }
+        </div>
+      </div>
+    </section>
+
+
+    <!-- MEETINGS — the document, shown rather than described -->
+    <section id="meetings" class="border-t border-white/5 px-5 py-24 sm:px-8 md:py-32">
+      <div class="mx-auto max-w-6xl">
+        <p class="mb-4 text-[12px] font-light uppercase tracking-[0.3em] text-white/40">Meetings</p>
+        <h2 class="font-garamond mb-5 max-w-3xl text-4xl font-normal leading-tight text-white sm:text-5xl md:text-6xl">
+          Sit in the meeting. Not in the minutes.
+        </h2>
+        <p class="mb-14 max-w-2xl text-[16px] font-light leading-relaxed text-white/60">
+          Voxhelm listens to the call and hands you the document the moment it ends:
+          what was decided, who agreed to what, and the questions left open. It works
+          with Teams, Meet, Zoom and anything else you can hear, and nothing joins
+          your call.
+        </p>
+
+        <MeetingDemo client:visible />
+
+        <div class="mt-12 grid gap-8 sm:grid-cols-3">
+          <div>
+            <h3 class="mb-2 text-lg font-medium text-white">No bot in the room</h3>
+            <p class="text-[15px] font-light leading-relaxed text-white/60">
+              Nothing joins the call and nothing appears in the participant list. Voxhelm
+              listens the way you do, from your own machine.
+            </p>
+          </div>
+          <div>
+            <h3 class="mb-2 text-lg font-medium text-white">No recording is kept</h3>
+            <p class="text-[15px] font-light leading-relaxed text-white/60">
+              The audio is turned into text and deleted as the meeting runs. What survives
+              is the document, on your computer, in your folder.
+            </p>
+          </div>
+          <div>
+            <h3 class="mb-2 text-lg font-medium text-white">Everyone can see it</h3>
+            <p class="text-[15px] font-light leading-relaxed text-white/60">
+              It never starts on its own, it says so while it is listening, and it stops
+              itself when the meeting ends. Tell the room. That part is on you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DICTATION -->
+    <section id="dictation" class="border-t border-white/5 px-5 py-24 sm:px-8 md:py-32">
+      <div class="mx-auto max-w-6xl">
+        <p class="mb-4 text-[12px] font-light uppercase tracking-[0.3em] text-white/40">Dictation</p>
+        <div class="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-16">
+          <div>
+            <h2 class="font-garamond mb-5 text-4xl font-normal leading-tight text-white sm:text-5xl">
+              Say it once. It types it properly.
+            </h2>
+            <p class="max-w-xl text-[16px] font-light leading-relaxed text-white/60">
+              Hold a key and speak, anywhere in Windows. What lands is not a transcript of
+              your hesitations, it is the sentence you meant, punctuated and formatted,
+              wherever your cursor already is.
+            </p>
+            <p class="mt-5 max-w-xl text-[15px] font-light leading-relaxed text-white/40">
+              About three times faster than typing, in your language, in every app.
+            </p>
+          </div>
+          <DictationDemo client:visible />
         </div>
       </div>
     </section>

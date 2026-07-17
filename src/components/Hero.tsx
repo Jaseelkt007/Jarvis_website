@@ -17,7 +17,8 @@ const HERO_VIDEO =
 
 const NAV_LINKS = [
   { label: 'Features', href: '#features' },
-  { label: 'How it works', href: '#how' },
+  { label: 'Meetings', href: '#meetings' },
+  { label: 'Dictation', href: '#dictation' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Support', href: '#support' },
 ];
