@@ -2,6 +2,15 @@
   "_comment": "Canonical Voxhelm changelog. Single source of truth: the release script (release.ps1) turns the newest entry's notes into latest.json for the in-app 'Update & Restart' prompt, and the website /changelog page renders this same file (publish-update.sh copies it to Jarvis_website/src/data/releases.json). THIS IS PUBLISHED MARKETING COPY, NOT AN ENGINEERING LOG — competitors and prospects read every line. Never describe a security fix's mechanism, never admit a defect in the payment or sign-in path, never name vendors/architecture (Stripe, CDP, providers, the broker), never hint at what's coming next. Say what the customer can now DO; collapse everything else into 'Reliability improvements'. TERSE IS THE HOUSE STYLE — size the note to the size of the change: a small release gets ONE short line ('Voxhelm has a new app icon.'), never a paragraph. Do not explain the change, tour the user through where they will see it, or reassure them the rest still works. Only ship an entry for a release that changed something worth a customer's attention — patch releases need no entry. The candid record lives in docs/_milestone_log.md, which is not published. See CLAUDE.md, 'The changelog is a public surface'. Add new entries at the TOP. Dates are ISO YYYY-MM-DD.",
   "releases": [
     {
+      "version": "0.5.0",
+      "date": "2026-07-17",
+      "title": "Dictate anywhere",
+      "notes": [
+        "New: hold Right Ctrl and speak — Voxhelm types what you said, polished, wherever your cursor is. Works in every app, in your language.",
+        "Pick an output style and add names it should spell your way in Settings → Dictation."
+      ]
+    },
+    {
       "version": "0.4.2",
       "date": "2026-07-14",
       "title": "New icon",
@@ -42,7 +51,7 @@
       "date": "2026-07-13",
       "title": "See your Pro trial at a glance",
       "notes": [
-        "Your free month of Pro now shows the days remaining, right in the sidebar - so you always know where you stand.",
+        "Your free Pro trial now shows the days remaining, right in the sidebar - so you always know where you stand.",
         "Keeping Pro is one click from there when you're ready, and nothing you've got used to goes away.",
         "Already on Pro? Elite, with three times the voice limits, is now a click away too."
       ]
@@ -99,10 +108,10 @@
     {
       "version": "0.3.4",
       "date": "2026-07-01",
-      "title": "Hands-on setup, and a free month of Pro",
+      "title": "Hands-on setup, and a free Pro trial",
       "notes": [
         "Setup now walks you through it hands-on: hold Right Alt to talk, ask Voxhelm to look something up and type it for you, and have it draw on your screen - so you know it works before you start.",
-        "Your first month of Pro is on us. Just sign in, no card needed. After that you stay on a free plan with generous limits.",
+        "Your Pro trial is on us. Just sign in, no card needed. After that you stay on a free plan with generous limits.",
         "'Check for updates' shows you the result right in Settings, instead of a message you might miss."
       ]
     },

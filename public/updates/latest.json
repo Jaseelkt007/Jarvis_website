@@ -1,11 +1,11 @@
 {
-    "version":  "0.4.4",
+    "version":  "0.5.1",
     "notes":  "Bug fixes and improvements.",
-    "pub_date":  "2026-07-16T01:00:36Z",
+    "pub_date":  "2026-07-17T01:25:28Z",
     "platforms":  {
                       "windows-x86_64":  {
-                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSZHJhOVh3bmE5R1EwcUYrU3VvR1lSR09ialFLcHVneDMrM3daalpjSVdqcUJ1RlFIb1J6R0d6ZGJTODMxYVZub3VxRnFYeE1UU214VjZtRTc1MmVCeXYwcWlxZHEvSmdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MTYzNjM0CWZpbGU6Vm94aGVsbV8wLjQuNF94NjQtc2V0dXAuZXhlCk1QM2t0eU5HT09aaVJna0VrbGp3TnFtTWNxR2dJZ2pZc0l4VTk4MG1QRXIrRm44bXYrNy9BNWlyaXNUaG1DVkR0ZXU2L0lsSk5SL2dJVFQvbE5OVkJRPT0K",
-                                             "url":  "https://voxhelm.de/downloads/Voxhelm_0.4.4_x64-setup.exe"
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSZHJhOVh3bmE5R1ltcHYwbGlyd0NhTTRVN2d5Sm1DenpwU0hkcWtnYUx6SEJEMnhVbzZJaVpxS1RjY2NpNkIxdndRdVJ5UlJkRjR3TFAwdGRHVmNvWklIYi9UZGV1b2dNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MjUxNTI2CWZpbGU6Vm94aGVsbV8wLjUuMV94NjQtc2V0dXAuZXhlCmxmd1A1TzRvb1ovcWYxaHU2U3hWR0RBTVgvYUVKWU81UC9wRXFhd2hIUnJ5RGNFL0FWekdLZWRiN1E3VFFOKzlFZFhzN21PTGY5YjRhTGVldllkQ0JnPT0K",
+                                             "url":  "https://voxhelm.de/downloads/Voxhelm_0.5.1_x64-setup.exe"
                                          }
                   }
 }
