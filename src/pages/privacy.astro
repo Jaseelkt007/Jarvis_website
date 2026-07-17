@@ -40,7 +40,7 @@ import { DISCORD_URL, PRIVACY_EMAIL } from '../site';
         <ul class="space-y-3">
           <li><strong class="font-medium text-white/90">Account &amp; sign-in:</strong> when you sign in with Google we receive your email and a Google account identifier, used to identify your account and let your subscription follow you across devices.</li>
           <li><strong class="font-medium text-white/90">Billing:</strong> subscriptions are processed by Stripe. We do not store your card details; Stripe does. We keep your subscription status and plan.</li>
-          <li><strong class="font-medium text-white/90">Usage metering:</strong> we record session duration and, for hosted-AI calls, token counts and cost data per call (which model, how much it processed) to enforce fair-use limits and understand product costs. We do not store the contents — text, audio, or images — of those sessions on our servers.</li>
+          <li><strong class="font-medium text-white/90">Usage metering:</strong> we record session duration and, for hosted-AI calls, token counts and cost data per call (which model, how much it processed) to enforce fair-use limits and understand product costs. This includes minutes of meeting audio transcribed, if you use meeting notes. We do not store the contents — text, audio, or images — of those sessions on our servers.</li>
           <li><strong class="font-medium text-white/90">Hosted AI calls:</strong> when you use the hosted AI, the necessary request (e.g. text or a screenshot you ask us to look at) is sent to our AI provider to generate a response, then discarded. The provider processes it under their terms.</li>
         </ul>
       </div>
@@ -51,11 +51,74 @@ import { DISCORD_URL, PRIVACY_EMAIL } from '../site';
       </div>
 
       <div>
+        <h2 class="mb-3 text-lg font-medium text-white">Meeting notes</h2>
+        <p>
+          If you turn on meeting notes, Voxhelm listens to a meeting on your computer so it
+          can write you a transcript and a summary. This is worth setting out separately,
+          because it is the one part of Voxhelm that processes other people's personal
+          data: the voices of everyone in your call, not only yours.
+        </p>
+        <p class="mt-3">
+          <span class="text-white/90">It only ever runs when you ask it to.</span> Meeting
+          notes is off until you switch it on, it never starts by itself, it never joins or
+          appears in your meeting, and Voxhelm shows that it is listening for as long as it
+          is. It stops on its own when your meeting ends.
+        </p>
+        <p class="mt-3">
+          <span class="text-white/90">What happens to the audio.</span> While the meeting
+          runs, the audio is sent in short pieces to our AI provider to be turned into
+          text, and each piece is deleted from your computer as soon as its text exists. No
+          recording of your meeting is kept: not on our servers, and not on your machine.
+          What survives is text.
+        </p>
+        <p class="mt-3">
+          <span class="text-white/90">Where your notes live.</span> On your computer, in
+          your own folder, as files you can open, edit, move and delete. Your transcript,
+          your notes and any screenshots of shared slides are never uploaded to us and we
+          cannot read them. Deleting the folder deletes them.
+        </p>
+        <p class="mt-3">
+          <span class="text-white/90">What our servers keep: nothing from the meeting.</span>
+          Audio passes through our infrastructure to reach the AI provider and is not
+          stored there. We do keep the same usage metering as the rest of the product,
+          which is how many minutes were transcribed and what they cost us, in counts and
+          timestamps rather than content.
+        </p>
+        <p class="mt-3">
+          <span class="text-white/90">What our AI provider keeps.</span> We use Google's
+          Gemini API. Under its paid terms, Google does not use what we send to train its
+          models, but it does retain prompts and responses for a limited period for abuse
+          monitoring. So while we keep no meeting content, we cannot honestly tell you that
+          nobody does: for that limited window, our provider holds it under its own terms.
+        </p>
+        <p class="mt-3">
+          <span class="text-white/90">Who is responsible for what.</span> For the content of
+          your meetings you are the controller and we act as your processor: you decide to
+          record and you hold the files. Telling the other participants, and having whatever
+          permission the law where you and they are requires, is your responsibility, not
+          ours. Recording someone without their agreement is a criminal offence in Germany
+          (§201 StGB) and unlawful in several US states. The processing terms are in our
+          <a href="/terms" class="text-white underline underline-offset-4 hover:text-white/80">Terms of Service</a>.
+        </p>
+        <p class="mt-3">
+          <span class="text-white/90">If you were in someone's meeting.</span> If you
+          believe you were recorded by a Voxhelm user and want the recording accessed or
+          erased, we almost certainly cannot help directly, and we would rather say so than
+          pretend otherwise: the notes are on that person's computer and we hold no copy.
+          Please contact them. You can still write to
+          <a href={`mailto:${PRIVACY_EMAIL}`} class="text-white underline underline-offset-4 hover:text-white/80">{PRIVACY_EMAIL}</a>
+          and we will help as far as our role allows.
+        </p>
+      </div>
+
+      <div>
         <h2 class="mb-3 text-lg font-medium text-white">Where your data goes</h2>
         <p>
-          Some of the processors we use — Stripe (billing), Google (sign-in), and our hosted-AI
-          providers — are based in or transfer data to the United States. Where that happens, we
-          rely on their standard contractual clauses or another safeguard recognized under GDPR.
+          Some of the processors we use — Stripe (billing), Google (sign-in), Cloudflare (our
+          infrastructure), and our hosted-AI providers — are based in or transfer data to the
+          United States. Where that happens, we rely on their standard contractual clauses or
+          another safeguard recognized under GDPR. This includes meeting audio, which reaches
+          our AI provider to be transcribed and may be processed outside the EEA.
         </p>
       </div>
 
