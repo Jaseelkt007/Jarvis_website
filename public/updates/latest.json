@@ -1,11 +1,11 @@
 {
-    "version":  "0.6.1",
-    "notes":  "Taking notes from the Meetings page now works reliably.",
-    "pub_date":  "2026-07-17T12:30:56Z",
+    "version":  "0.7.0",
+    "notes":  "A new status capsule shows what Voxhelm is doing at a glance — listening, heard you, thinking, acting, speaking.\nLonger tasks now show their progress live: the goal, each step as it happens, and how to cancel.\nOn-screen drawing looks sharper: colors that carry meaning, labels that stay readable on any background, smooth erasing, and a new spotlight to focus your attention.",
+    "pub_date":  "2026-07-19T10:56:52Z",
     "platforms":  {
                       "windows-x86_64":  {
-                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSZHJhOVh3bmE5R1lqL01TWVpvL0NwM0t3ZDFhMjV3a2xxbThEK1NuUW0rK2ovekU5OFR5Q3h5WG5lSjY4QTFOVENqZHVHMjkxOE5HTmxLeTllN2JvZE52N242amtSQWdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MjkxNDU0CWZpbGU6Vm94aGVsbV8wLjYuMV94NjQtc2V0dXAuZXhlCjRuSEg3RzVvY2NtWG16d25abkpCa3I5eHZ3ZlBDR0h0NjljWUljYzcxVVZhTkxIc1VFcFZueldwRDVMeWhydDlnSXdLNnZQb21LcEU3Z2FKbzcybEF3PT0K",
-                                             "url":  "https://voxhelm.de/downloads/Voxhelm_0.6.1_x64-setup.exe"
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSZHJhOVh3bmE5R1pxU0VIMmZESjIyUDFCUTEzQldTZmRNZ0JXL0VnTVM1MVI3R0VHWXVVaWdzZGx4eDR4aXBWNEd1cS8yME83MXhpbm95dlVCcGwrUC9WOVF5VHprcXdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0NDU4NjAxCWZpbGU6Vm94aGVsbV8wLjcuMF94NjQtc2V0dXAuZXhlCkNyUDRyL2U3QlhuV0NpNTIxcFdZNGExd1lRTU5PWTdqZWJ4bzBxcGpaQkpMMGZSaEYrTnNydTZNdFZpODlab0IyYU5UY2lSWVRkRzZXcTVRenpBeERnPT0K",
+                                             "url":  "https://voxhelm.de/downloads/Voxhelm_0.7.0_x64-setup.exe"
                                          }
                   }
 }
